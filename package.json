@@ -1,0 +1,30 @@
+{
+  "name": "leaflet-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for Leaflet.js mapping library with comprehensive documentation and code generation tools",
+  "type": "module",
+  "bin": {
+    "leaflet-mcp-server": "./build/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build",
+    "watch": "tsc --watch"
+  },
+  "keywords": [
+    "mcp",
+    "leaflet",
+    "maps",
+    "geospatial",
+    "gis"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "typescript": "^5.7.2"
+  }
+}

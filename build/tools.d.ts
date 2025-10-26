@@ -1,0 +1,9 @@
+export declare function generateMapCode(args: any): string;
+export declare function generateMarkerCode(args: any): string;
+export declare function generateLayerCode(args: any): string;
+export declare function generatePopupCode(args: any): string;
+export declare function generateGeoJSONCode(args: any): string;
+export declare function generateChoroplethCode(args: any): string;
+export declare function convertCoordinates(args: any): string;
+export declare function suggestPlugin(args: any): string;
+export declare function searchExamples(args: any): string;
