@@ -210,17 +210,9 @@ Get help debugging common Leaflet problems.
    cd leaflet-mcp-server
    ```
 
-2. **Install dependencies:**
-   ```bash
-   npm install
-   ```
+2. **Configure your MCP client** (e.g., Claude Desktop). No manual install or build is needed: `build/` is committed, and `scripts/start.mjs` runs `npm ci --omit=dev` itself whenever `package-lock.json` changes since its last successful install.
 
-3. **Build the server:**
-   ```bash
-   npm run build
-   ```
-
-4. **Configure your MCP client** (e.g., Claude Desktop):
+   The first start after a dependency change takes about 20–30s while packages install, and can exceed Claude Code's 30s MCP connect timeout on a slow machine. If that happens, reconnect (`/mcp` in Claude Code); later starts take about 1s.
 
    Add to your MCP settings file:
 
@@ -232,13 +224,13 @@ Get help debugging common Leaflet problems.
      "mcpServers": {
        "leaflet": {
          "command": "node",
-         "args": ["/absolute/path/to/leaflet-mcp-server/build/index.js"]
+         "args": ["/absolute/path/to/leaflet-mcp-server/scripts/start.mjs"]
        }
      }
    }
    ```
 
-5. **Restart your MCP client** to load the server.
+3. **Restart your MCP client** to load the server.
 
 ### Development Mode
 
